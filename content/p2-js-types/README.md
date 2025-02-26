@@ -15,6 +15,8 @@ tags: basics,js
 1. [Booleans if else](#booleans-if-else)
 1. [Array](#Array)
 1. [Functions](#Functions)
+1. [Positional arguments](#positional-arguments)
+1. [Function properties](#function-properties)
 1. [Additional resources](#additional-resources)
 
 ## Basic Javascript
@@ -209,6 +211,59 @@ mi_reporte(5);
 
 // ¿Qué resultado te devuelve?
 ```
+
+## Positional arguments
+
+```js
+function saluda(nombre, lang) {
+	console.log(nombre, 'bienvenid@');
+}
+
+saluda('Paco', 'es'); // esto recibe el nombre de invocación o llamada
+```
+
+Existe una distintición conceptual muy importante que es `argumentos vs parámetros`.
+
+- Los `argumentos` o `argumentos posicionales` son los elementos que recibe una función. En function saluda son `nombre` y lang. Se rellenan con un valor x cuando se las invoca.
+
+- Los `parámetros` van en la llamada a la función: ("Paco","es").
+
+```js
+function saluda(nombre, lang) {
+	return console.log(nombre); //return undefined
+
+	return 'hello!';
+	return 'bonjour!'; //unrecheable code
+	throw new Error('idioma no implementado'); //programación defensiva
+}
+
+saluda('luis'); // lang es undefined en saluda() porque JS permite que falten argumentos posicionales (aunque no es lo recomendable).
+test(); // no está asignada y no se muestra nada por pantalla, solo se ejecuta.
+console.log(test()); // Se ejecuta primero la función. console.log pinta el return de la función.
+let valor = saluda(); //Valor valdrá el return de saluda.
+let valor = console.log('hola'); //undefined
+```
+
+> [!TIP]
+> Una función SIEMPRE devuelve algo. En caso de no tener return devuelve `undefined`.
+> `console.log`: Es una función ya definida por JS que devuelve undefined.
+
+## Function properties
+
+`funciones`: para `reutilizar código` y `abstraernos` de lo que estamos usando (tener carnet de conducir pero no tener porque saber como funciona el motor de combustión interna).
+
+- Separate the code in different parts
+- Abstraction
+- Single purpose
+- Pure vs Impure: Avoid side effects
+
+`console.log("Hola")` es una función que imprime el parámetro, pero `return undefined`.
+
+> `JavaScript` (abreviado comúnmente JS) es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como `orientado a objetos`,​ basado en `prototipos`, `imperativo`, `débilmente tipado` y `dinámico`.
+
+`Tipado dinámico`: el tipo de una función cambia. Es una caracterísitica de JS, las variables pueden tener el tipo que sea y pueden cambiar.
+
+`Refactorización`: Reescribir código que ya funciona para poder hacer crecer en funcionalidades.
 
 ## Additional resources
 

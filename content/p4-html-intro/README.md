@@ -10,6 +10,8 @@ tags: basics,html
 1. [Goals](#goals)
 1. [Resources needed](#resources-needed)
 1. [Our first HTML](#our-first-html)
+1. [HTML DOM tree](#html-dom-tree)
+1. [HTML in detail](#html-in-detail)
 1. [Semantic HTML](#semantic-html)
 1. [Block Vs Inline](#block-vs-inline)
 1. [Block elements](#block-elements)
@@ -102,7 +104,7 @@ Intenta localizar los siguientes componentes en el código HTML:
 
 ¿Los tienes todos?
 
-## 2. HTML DOM tree
+## HTML DOM tree
 
 Todo documento de HTML puede ser representado como un árbol simbólico bajo el concepto de `Document Object Model`, popularmente conocido como `DOM`. Este DOM contiene todos los elementos que emplea el documento HTML, su formato y el estado del navegador en un momento concreto.
 
@@ -148,6 +150,67 @@ Por norma general, de cara al usuario esta información permanece "invisible" y 
 ### `<body>`
 
 Es el elemento que agrupa todo el contenido de nuestro documento HTML. Debe estar siempre comprendido entre las etiquetas de `<body>` y `</body>`. Sólo puede haber un elemento body en todo el documento. Todos los elementos que incluyamos aquí se mostrarán en nuestra página en el navegador.
+
+## HTML in detail
+
+`HTML`: Es un lenguaje de marcado (no es un código de programación). Nos indica como se colocan los elementos en una página web. El código HTML marcará la estructura. El `CSS` marcará el estilo. Todas las etiquetas tienen un `estilo por defecto` que podemos ver gracias a las chrome dev tools.
+
+- `<>`: apertura de etiqueta
+- `</>`: cierre de etiqueta
+- `<h1>`: Cabecera
+- `<p>`: párrafo
+- `<ul>`: unordered list
+- `<ol>`: ordered list
+- `<li>`: elemento hijo de `<ul>` / `<ol>`.
+- `<br/>`: salto de línea
+- `<a href="www.youtube.com">`: ancla o hipervínculo. Podemos añadir `atributos`.
+- `<p>Esto es un <a href="www.()">enlace a google</a></p>`.
+- `<img src="" width="">`: Etiqueta img con atributos como src o width.
+- `<h2>`: subtítulo. Tenemos desde h2 hasta h6.
+
+> Un `atributo` es una especificación concreta de los distintos tipos de etiquetas html.
+>
+> En HTML los `saltos de línea` no aparecen (debemos usar `<br/>`).
+
+## HTML Code Example II
+
+```html
+<h1>Hello World</h1>
+<p>Welcome</p>
+<ul>
+	<li>Primer elemento</li>
+	<li>Segundo elemento</li>
+	<li>Tercer elemento</li>
+</ul>
+<ol>
+	<li>Primer elemento numerado</li>
+	<li>Segundo elemento numerado</li>
+	<li>Tercero elemento numerado</li>
+</ol>
+<p>
+	<a href="https://www.youtube.com">Esto es un enlace a youtube</a>
+	<!-- href es un atributo de la etiqueta-->
+</p>
+<p>
+	Esto es un enlace a
+	<a href="https://www.youtube.c">youtube</a>
+	<!-- href es un atributo de la etiqueta-->
+</p>
+<p>
+	Esto es un enlace a <br />
+	<!--br breakeable space-->
+	<a href="https://www.youtube.c">youtube</a>
+	<!-- href es un atributo de la etiqueta-->
+</p>
+
+<img
+	src="https://blog.playasenator.com/wp-content/uploads/2018/02/monsu22l.jpg"
+	width="200"
+/>
+<!--Ojo a la forma de esta etiqueta-->
+
+<!--Etiqueta “Block” Vs “Inline”-->
+```
 
 ## Semantic HTML
 
@@ -362,3 +425,4 @@ La etiqueta `<script>` se emplea para incluir referencias a un script ejecutable
 - Inline elements: https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
 - Block-level elements: https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
 - HTML MDN Tutorial: https://developer.mozilla.org/en-US/docs/Learn/HTML
+- JAVASCRIPT: https://github.com/airbnb/javascript

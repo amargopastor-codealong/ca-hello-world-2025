@@ -197,6 +197,10 @@ h1 {
 
 - **Border: 5px solid black**: Este simplemente pone un borde de 5 píxeles de ancho, continuo y de color negro alrededor del elemento body.
 
+> [!TIP]  
+> Los selectores van de menos específicos (div) a más específicos (clase .button). Es decir, las clases tienen preferencia sobre las etiquetas.
+> El orden de los estilos influye en el resultado final. Primero estilos generales de etiquetas. Después clases principales y luego variantes de clases y estilos concretos.
+
 ## Recursos adicionales
 
 - https://www.w3.org/Style/CSS/#specs
